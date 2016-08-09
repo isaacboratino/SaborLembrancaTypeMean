@@ -26,7 +26,7 @@ class RepositoryBase<T extends Mongoose.Document> implements IRead<T>, IWrite<T>
     }
 
     update (id: Mongoose.Types.ObjectId, item: T, callback: (error: any, result: any) => void) {
-        this._model.update({}, item, callback);
+        this._model.update({}, item, callback); 
     }
 
     delete (id: string, callback: (error: any, result: any) => void) {
