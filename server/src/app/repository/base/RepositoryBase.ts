@@ -19,7 +19,7 @@ class RepositoryBase<T extends Mongoose.Document> implements IRead<T>, IWrite<T>
 
     findById (id: string, callback: (error: any, resukt: any) => void) {
         this._model.findById(id, callback);
-    } 
+    }  
 
     create (item: T, callback: (error: any, result: any) => void) {
         this._model.create(item, callback);
