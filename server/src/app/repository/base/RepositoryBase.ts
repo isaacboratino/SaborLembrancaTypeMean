@@ -14,7 +14,7 @@ class RepositoryBase<T extends Mongoose.Document> implements IRead<T>, IWrite<T>
     }
 
     retrieve (callback: (error: any, result: any) => void) {
-        this._model.find({}, callback);
+        this._model.find({}, callback); 
     }
 
     findById (id: string, callback: (error: any, resukt: any) => void) {
