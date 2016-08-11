@@ -10,7 +10,7 @@ class ProdutoRoutes {
         this._controller = new ProdutoController();
     }
 
-    get routes() {
+    get routes() : express.Router {
         var controller = this._controller;
         router.get('/produtos',controller.retrieve);
         router.post('/produtos',controller.create);

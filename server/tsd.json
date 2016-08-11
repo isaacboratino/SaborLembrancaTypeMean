@@ -13,6 +13,12 @@
     },
     "express/express.d.ts": {
       "commit": "bc38caf4c4781b8a9b13785a0529fcd47fd1bfb4"
+    },
+    "body-parser/body-parser.d.ts": {
+      "commit": "15db109a05436777201662f557d3f02e1e4197d2"
+    },
+    "method-override/method-override.d.ts": {
+      "commit": "1d38e2f2584c3695532c215c708f4eb4e346866e"
     }
   }
 }

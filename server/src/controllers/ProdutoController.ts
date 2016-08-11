@@ -14,20 +14,22 @@ class ProdutoController implements IControllerBase<ProdutoBusiness> {
     create (req: express.Request, res: express.Response): void {
         try {
             var model: IProdutoModel = <IProdutoModel>req.body;
-            this._business.create(model, (error, result) => {
-                if (error) res.send({'error':'error'});
+            var business: ProdutoBusiness = new ProdutoBusiness();
+            console.log(model);
+            business.create(model, (error, result) => {
+                if (error) res.send({'error':error});
                 else res.send({'success':'success'});
             })
         } catch (error) {
             console.log(error);
-            res.send({'error':'error'});
+            res.send({'error':error});
         }
     }
 
     retrieve (req: express.Request, res: express.Response):void {
         try {
             this._business.retrieve((error, result) => {
-                if (error) res.send({'error':'error'});
+                if (error) res.send({'error':error});
                 else res.send(result)
             });
         } catch (error) {
@@ -41,7 +43,7 @@ class ProdutoController implements IControllerBase<ProdutoBusiness> {
             var model: IProdutoModel = <IProdutoModel>req.body;
             var id: string = req.param.id;
             this._business.update(id, model, (error, result) => {
-                if (error) res.send({'error':'error'});
+                if (error) res.send({'error':error});
                 else res.send({'success':'success'});
             });
         } catch (error) {
@@ -54,7 +56,7 @@ class ProdutoController implements IControllerBase<ProdutoBusiness> {
         try {
             var id: string = req.param.id;
             this._business.delete(id, (error, result) => {
-                if (error) res.send({'error':'error'});
+                if (error) res.send({'error':error});
                 else res.send({'success':'success'});
             });
         } catch (error) {
@@ -67,7 +69,7 @@ class ProdutoController implements IControllerBase<ProdutoBusiness> {
         try {
             var id: string = req.param.id;
             this._business.findById(id, (error, result) => {
-                if (error) res.send({'error':'error'});
+                if (error) res.send({'error':error});
                 else res.send(result);
             });
         } catch (error) {

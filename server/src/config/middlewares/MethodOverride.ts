@@ -1,5 +1,5 @@
-import methodOverride = require('method-override');
-import express = require('express');
+import methodOverride = require("method-override");
+import express = require("express");
 
 class MethodOverride {
     static configuration() : any {

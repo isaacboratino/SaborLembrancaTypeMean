@@ -30,7 +30,7 @@ gulp.task('compile', function() {
         
         //incluimos a pasta para a saida de
         //arquivos transpilados
-        .pipe(gulp.dest('lib'));
+        .pipe(gulp.dest('server/lib'));
 });
 //funçao responsável pela observacao de alteracoes em
 //arquivos de nossa pasta src.

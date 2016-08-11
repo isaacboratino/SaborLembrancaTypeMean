@@ -5,7 +5,7 @@ var app = express();
 class RoutesBase {
 
     get routes() {
-        app.uses('/', new ProdutoRoutes());
+        app.use('/', new ProdutoRoutes().routes);
         return app;
     }
 }
