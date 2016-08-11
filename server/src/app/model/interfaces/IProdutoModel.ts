@@ -1,11 +1,9 @@
 /// <reference path="../../../../typings/tsd.d.ts" />
+import mongoose = require("mongoose");
 
-import Mongoose = require('mongoose');
-
-interface IProdutoModel extends Mongoose.Document
-{
-    nome: string,
-    valor: number
+interface IProdutoModel extends mongoose.Document {
+  nome: string;
+  valor: number;
 }
 
 export = IProdutoModel;
