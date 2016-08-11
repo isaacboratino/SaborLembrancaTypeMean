@@ -8,7 +8,7 @@ import Mongoose = require('mongoose');
 class RepositoryBase<T extends Mongoose.Document> implements IRead<T>, IWrite<T> {
 
     private _model: Mongoose.Model<Mongoose.Document>;
-
+ 
     constructor(schemaModel: Mongoose.Model<Mongoose.Document>) {
         this._model = schemaModel;
     }
@@ -17,9 +17,9 @@ class RepositoryBase<T extends Mongoose.Document> implements IRead<T>, IWrite<T>
         this._model.find({}, callback); 
     }
 
-    findById (id: string, callback: (error: any, resukt: any) => void) {
+    findById (id: string, callback: (error: any, result: T) => void) {
         this._model.findById(id, callback);
-    }  
+    } 
 
     create (item: T, callback: (error: any, result: any) => void) {
         this._model.create(item, callback);
