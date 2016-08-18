@@ -19,7 +19,8 @@
   "devDependencies": {
     "body-parser": "^1.15.2",
     "gulp": "^3.9.1",
-    "gulp-typescript-compiler": "^1.0.1"
+    "gulp-typescript-compiler": "^1.0.1",
+    "morgan": "^1.7.0"
   },
   "dependencies": {
     "method-override": "^2.3.6",
